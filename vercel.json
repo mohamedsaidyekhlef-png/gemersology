@@ -1,0 +1,10 @@
+﻿{
+  "version": 2,
+  "builds": [
+    { "src": "dist/**", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/blog", "destination": "/blog/index.html" },
+    { "source": "/blog/:slug", "destination": "/blog/:slug.html" }
+  ]
+}
