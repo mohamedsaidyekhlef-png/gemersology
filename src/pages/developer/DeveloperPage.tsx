@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Terminal, Copy, Check, BarChart2, Shield, RefreshCw } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { motion } from 'framer-motion';
+import { copyToClipboard } from '../../lib/utils';
 
 export const DeveloperPage = () => {
   const [apiKey, setApiKey] = useState('gm_live_8x92m... (hidden)');
@@ -19,10 +20,12 @@ export const DeveloperPage = () => {
     }
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText('gm_live_8x92m93kd92001ks83jd92');
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopy = async () => {
+    const success = await copyToClipboard('gm_live_8x92m93kd92001ks83jd92');
+    if (success) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   return (

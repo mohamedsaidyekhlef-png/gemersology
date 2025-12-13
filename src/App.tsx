@@ -14,9 +14,11 @@ import { TrackPage } from './pages/TrackPage';
 import { PlayerProfile } from './pages/PlayerProfile';
 import { PlayerAnalysis } from './pages/PlayerAnalysis';
 import { BlogPage } from './pages/BlogPage';
+import { BlogPostPage } from './pages/BlogPostPage';
 import { ShopPage } from './pages/ShopPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { ProPage } from './pages/ProPage';
+import { ToolsPage } from './pages/ToolsPage'; // Import ToolsPage
 import { CheckoutPage } from './pages/checkout/CheckoutPage';
 import { DeveloperPage } from './pages/developer/DeveloperPage';
 
@@ -51,10 +53,15 @@ function App() {
             <Route path="/track" element={<TrackPage />} />
             <Route path="/track/:game/:player" element={<PlayerProfile />} />
             <Route path="/track/:game/:player/analysis" element={<PlayerAnalysis />} />
+            
+            {/* Blog Routes */}
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/pro" element={<ProPage />} />
+            <Route path="/tools" element={<ToolsPage />} /> {/* Add Route */}
             
             {/* New Functional Routes */}
             <Route path="/checkout" element={<CheckoutPage />} />

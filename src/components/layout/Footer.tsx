@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Github, Youtube, Twitch } from 'lucide-react';
+import { Twitter, Github, Youtube, Twitch, Database, Globe } from 'lucide-react';
 
 export const Footer = () => {
   return (
@@ -18,18 +18,27 @@ export const Footer = () => {
                 GAMERS<span className="text-brand-gold">OLOGY</span>
               </span>
             </Link>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">
               The AI radar for every gamer. Track stats, improve mechanics, and find the best gear.
             </p>
+            {/* Authority Links (Trust Signals) */}
+            <div className="flex flex-wrap gap-4 text-xs text-gray-600">
+              <a href="https://tracker.gg" target="_blank" rel="dofollow" className="hover:text-brand-gold transition-colors flex items-center gap-1">
+                <Database className="w-3 h-3" /> Tracker Network
+              </a>
+              <a href="https://liquipedia.net" target="_blank" rel="dofollow" className="hover:text-brand-gold transition-colors flex items-center gap-1">
+                <Globe className="w-3 h-3" /> Liquipedia
+              </a>
+            </div>
           </div>
 
           <div>
             <h4 className="font-bold mb-4 text-white">Platform</h4>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/track" className="hover:text-brand-gold transition-colors">Player Tracker</Link></li>
+              <li><Link to="/tools" className="hover:text-brand-gold transition-colors">AI Tools Suite</Link></li>
               <li><Link to="/blog" className="hover:text-brand-gold transition-colors">Meta Science Blog</Link></li>
               <li><Link to="/shop" className="hover:text-brand-gold transition-colors">Gear Shop</Link></li>
-              <li><Link to="/services" className="hover:text-brand-gold transition-colors">Developers API</Link></li>
             </ul>
           </div>
 

@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { name: 'Track', href: '/track' },
+  { name: 'Tools', href: '/tools' }, // Added Tools
   { name: 'Blog', href: '/blog' },
   { name: 'Shop', href: '/shop' },
   { name: 'Services', href: '/services' },
